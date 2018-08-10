@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+#box{width: 300px;height: 500px;border: 1px solid #eee;margin: 50px auto;}
+h1{font-size: 24px;padding-left:10px ;color: pink;height: 40px;line-height: 40px;border-bottom: 1px dashed #eee;}
+span{display: inline-block;width: 20px;height: 20px;background: #eee;text-align: center;line-height: 20px;margin: 0 5px;}
+ul>li{padding: 5px;border-bottom: 1px dashed #eee;}
+ul>li:nth-child(-n+3) span{background: pink;}
+#cont{width: 300px;overflow: hidden;margin-top: 5px;display: none;}
+img{width: 100px;height: 120px;float: left;}
+p{float: right;font-size: 14px;width: 190px;}
+</style>
+</head>
+<body>
+<div id="box">
+	<h1>电影排行榜</h1>
+	<ul>
+		<li><span>1</span>后来的我们
+			<div id="cont">
+				<img src="images/1.png" >
+				<p>见清和小晓是同乡，机缘巧合之下，小晓在见清家吃了一顿年夜饭，从那之后，见清和小晓的命运便纠缠在一起，恋爱、分手、错过、重逢.......后来的他们再也回不去了。</p>
+			</div>
+		</li>
+		<li><span>2</span>龙虾刑警
+			<div id="cont">
+				<img src="images/2.png" >
+				<p>话唠杜宇飞（王千源 饰）处于半退休状态的能叔（刘桦 饰）、恨嫁女花姐（袁姗姗 饰）以及新人陈笠（周游 饰）组成的不靠谱缉毒刑警小队，为了更隐蔽地监视毒贩，他们盘下隔壁的龙虾店。</p>
+			</div>
+		</li>
+		<li><span>3</span>金蝉脱壳2
+			<div id="cont">
+				<img src="images/3.png" >
+				<p>时隔四年，续作《金蝉脱壳2》回归，灵魂人物超级硬汉史泰龙重出江湖，再次出演运筹帷幄的越狱专家，携手黄晓明和戴夫·巴蒂斯塔等，再掀越狱风云。</p>
+			</div>
+		</li>
+		<li><span>4</span>21克拉</li>
+		<li><span>5</span>战神纪</li>
+		<li><span>6</span>唐人街探案</li>
+	</ul>
+</div>
+<script src="../jquery/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$("li").mouseenter(function(){
+	$(this).children("#cont").slideDown();
+})
+$("li").mouseleave(function(){
+	$(this).children("#cont").slideUp();
+})
+</script>
+</body>
+</html>
